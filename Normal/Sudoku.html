@@ -1,213 +1,218 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>William Bunin Sudoku Project</title>
+    <meta charset="UTF-8">
+    <title>William Bunin Sudoku Project</title>
 
-<style type="text/css">
-#outer_wrapper {
-	height: 1135px;
-	width: 700px;
-	display:block;
-	margin-right: auto;
-	margin-left: auto;
-	color:#9B30FF;
-	padding-left: 0px;
-	padding-right:0px;
-	padding-top: 0px;
-	padding-bottom:0px;
-}
+    <style type="text/css">
+        #outer_wrapper {
+            height: 1135px;
+            width: 700px;
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            color: #9B30FF;
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
 
-#photo_section {
-    display:block;
-    height: 340px;
-	width: 630px;
-    margin-right: auto;
-	margin-left: auto;
-	padding-top: 10px;
-	padding-bottom:5px;
-	padding-left: 0px;
-	padding-right:0px;
-	background-color:none;
-}
+        #photo_section {
+            display: block;
+            height: 340px;
+            width: 630px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            padding-left: 0px;
+            padding-right: 0px;
+            background-color: none;
+        }
 
-a {
-    text-decoration: none;
-}
+        a {
+            text-decoration: none;
+        }
 
-a:hover{
-    color:red;
-}
+        a:hover {
+            color: red;
+        }
 
-#nav {
-    background-color:black;
-	height: 30px;
-	width: 325px;
-	margin-right: auto;
-	margin-left: auto;
-	position: relative;
-	font-size: 17px;
-	padding-bottom:0px;
-	margin-top:5px;
-}
+        #nav {
+            background-color: black;
+            height: 30px;
+            width: 325px;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            font-size: 17px;
+            padding-bottom: 0px;
+            margin-top: 5px;
+        }
 
-ul {
-	list-style-type:none;
-	padding: 0px;
-}
+        ul {
+            list-style-type: none;
+            padding: 0px;
+        }
 
-ul li {
-	float: left;
-	margin-left: 9px;
-	margin-right:9px;
-}
+        ul li {
+            float: left;
+            margin-left: 9px;
+            margin-right: 9px;
+        }
 
-ul li a{
-	color:#9B30FF;
-}
+        ul li a {
+            color: #9B30FF;
+        }
 
-#subclass ul {
-	display: none;
-	background-color: black;
-	left: 35px;
-	padding-top: 6px;
-	padding-bottom:6px;
-	font-size:14px;
-}
+        #subclass ul {
+            display: none;
+            background-color: black;
+            left: 35px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-size: 14px;
+        }
 
-#subclass:hover ul {
-	position:absolute;
-	display:block;
-	color:#8F82FF;	
-	cursor:auto;
-}
+        #subclass:hover ul {
+            position: absolute;
+            display: block;
+            color: #8F82FF;
+            cursor: auto;
+        }
 
-#subclass ul a{
-	color:#8F82FF;
-}
+        #subclass ul a {
+            color: #8F82FF;
+        }
 
-#subclass ul a:hover{
-	color:red;
-}
+        #subclass ul a:hover {
+            color: red;
+        }
 
-#subclass2 ul {
-	display: none;
-	background-color: black;
-	left: 90px;
-	cursor:auto;
-	padding-top:6px;
-	padding-bottom:6px;
-	font-size:14px;
-	width:240px;
-}
+        #subclass2 ul {
+            display: none;
+            background-color: black;
+            left: 90px;
+            cursor: auto;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            font-size: 14px;
+            width: 240px;
+        }
 
-#subclass2:hover ul {
-	position:absolute;
-	display:block;
-	color:#8F82FF;	
-}
+        #subclass2:hover ul {
+            position: absolute;
+            display: block;
+            color: #8F82FF;
+        }
 
-#subclass2 ul a{
-	color:#8F82FF;
-}
+        #subclass2 ul a {
+            color: #8F82FF;
+        }
 
-#subclass2 ul a:hover{
-	color:red;
-}
+        #subclass2 ul a:hover {
+            color: red;
+        }
 
-#information_section {
-    background-color:#B8B8B8;
-    color: black;
-    width: 630px;
-    margin-right: auto;
-	margin-left: auto;
-	margin-top:25px;
-}
+        #information_section {
+            background-color: #B8B8B8;
+            color: black;
+            width: 630px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 25px;
+        }
 
-#experience_nav {
-    font-size:30px;
-    position: fixed;
-    left:40px;
-	width:130px;
-	background-color:black;
-	top:50px;
-	border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-top-color: red;
-	border-right-color: red;
-	border-bottom-color: red;
-	border-left-color: red;
-	text-align: center;
-	border-radius: 15px 15px 15px 15px;
-}
+        #experience_nav {
+            font-size: 30px;
+            position: fixed;
+            left: 40px;
+            width: 130px;
+            background-color: black;
+            top: 50px;
+            border-top-width: thin;
+            border-right-width: thin;
+            border-bottom-width: thin;
+            border-left-width: thin;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            border-top-color: red;
+            border-right-color: red;
+            border-bottom-color: red;
+            border-left-color: red;
+            text-align: center;
+            border-radius: 15px 15px 15px 15px;
+        }
 
-#experience_nav a{
-    color:#9B30FF;
-}
+        #experience_nav a {
+            color: #9B30FF;
+        }
 
-#experience_nav a:hover{
-    color:red;
-}
+        #experience_nav a:hover {
+            color: red;
+        }
 
 
-#sudoku_holder {
-     
-    width: 476px;
-    margin-right: auto;
-	margin-left: auto;
-	
-	space: 0px;
-	border-spacing: 0px;
-}
+        #sudoku_holder {
 
-#sudoku_holder input{
-    height: 50px;
-    width: 50px;
-    font-size: 50px;
-    text-align: center;
-    border-top-width: thin;
-	border-right-width: thin;
-	border-bottom-width: thin;
-	border-left-width: thin;
-	border-top-style: solid;
-	border-right-style: solid;
-	border-bottom-style: solid;
-	border-left-style: solid;
-	border-top-color: black;
-	border-right-color: black;
-	border-bottom-color: black;
-	border-left-color: black;
-	margin-left:0px;
-	margin-right:0px;
-	padding-left:0px;
-	padding-right:0px;
-}
+            width: 476px;
+            margin-right: auto;
+            margin-left: auto;
 
-#sudoku_holder .sudoku_top{
-    border-top-width: medium;
-}
+            space: 0px;
+            border-spacing: 0px;
+        }
 
-#sudoku_holder .sudoku_left{
-    border-left-width: medium;
-}
+        #sudoku_holder input {
+            height: 50px;
+            width: 50px;
+            font-size: 50px;
+            text-align: center;
+            border-top-width: thin;
+            border-right-width: thin;
+            border-bottom-width: thin;
+            border-left-width: thin;
+            border-top-style: solid;
+            border-right-style: solid;
+            border-bottom-style: solid;
+            border-left-style: solid;
+            border-top-color: black;
+            border-right-color: black;
+            border-bottom-color: black;
+            border-left-color: black;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
 
-#sudoku_holder .sudoku_right{
-    border-right-width: medium;
-}
-#sudoku_holder .sudoku_bottom{
-    border-bottom-width: medium;
-}
+        #sudoku_holder .sudoku_input {
+            border-width: 1px;
+            float: left;
+        }    
 
-</style>
+        #sudoku_holder .sudoku_top {
+            border-top-width: medium;
+        }
 
-<script>
-/*-------------------------------------------------------------------------
+        #sudoku_holder .sudoku_left {
+            border-left-width: medium;
+        }
+
+        #sudoku_holder .sudoku_right {
+            border-right-width: medium;
+        }
+
+        #sudoku_holder .sudoku_bottom {
+            border-bottom-width: medium;
+        }    
+    </style>
+    <script>
+        /*-------------------------------------------------------------------------
 List of all functions and global variables used and the order of where they 
 can be found.
 
@@ -255,1107 +260,1179 @@ set_unsolved_sudoku()
 
 -------------------------------------------------------------------------*/
 
-/*-------------------------------------------------------------------------
-A multidimensional array used to store the sudoku currently being looked 
-at's answer.
+        /*-------------------------------------------------------------------------
+        A multidimensional array used to store the sudoku currently being looked 
+        at's answer.
 
-Created 3/4/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-var solved_sudoku = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
- 
- /*-------------------------------------------------------------------------
+        Created 3/4/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        var solved_sudoku = [
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+        ];
+
+        /*-------------------------------------------------------------------------
 Sets solved_sudoku to the solved sudoku.
 
 Created 3/6/15
 Last modified 3/6/15
 -------------------------------------------------------------------------*/
-function set_solved_sudoku(sudoku){
-	for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-            solved_sudoku[i][j] = sudoku[i][j];
+        function set_solved_sudoku(sudoku) {
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    solved_sudoku[i][j] = sudoku[i][j];
+                }
+            }
         }
-    }
-}
- 
- /*-------------------------------------------------------------------------
+
+        /*-------------------------------------------------------------------------
 A multidimensional array used to store the sudoku currently being looked 
 at's unsolved form.    
 
 Created 3/4/15
 Last modified 3/6/15
 -------------------------------------------------------------------------*/
-var unsolved_sudoku = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
+        var unsolved_sudoku = [
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+            ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+        ];
 
 
 
-/*-------------------------------------------------------------------------
-A function which is used to solve a sudoku puzzle.
+        /*-------------------------------------------------------------------------
+        A function which is used to solve a sudoku puzzle.
 
-Input: Filled input boxes named s00 to s88 where the boxes conetents are 
-numbers from 1-9.
+        Input: Filled input boxes named s00 to s88 where the boxes conetents are 
+        numbers from 1-9.
 
-Output: If the puzzle is unsolvable, a message will state the puzzle is 
-unsolvable.  If the puzzle is solvable, then the empty boxes will be filled 
-with correct answers.
+        Output: If the puzzle is unsolvable, a message will state the puzzle is 
+        unsolvable.  If the puzzle is solvable, then the empty boxes will be filled 
+        with correct answers.
 
-Created around 2/11/15
-Last modified 2/25/15
--------------------------------------------------------------------------*/
+        Created around 2/11/15
+        Last modified 2/25/15
+        -------------------------------------------------------------------------*/
 
-function solve_sudoku_puzzle(){
-    //A multidimensional array used to store the given sudoku.  0's represent empty spots.
-    var sudoku = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
-    //Stores the number of 0's indie of sudoku.  
-    var unfilled_boxes = 81;
-    
-    unfilled_boxes = fill_boxes(sudoku, unfilled_boxes);
-    if(solve_sudoku(sudoku, unfilled_boxes, "normal")){
-		set_solved_sudoku(sudoku);
-		print_sudoku(sudoku, true, true);
-	}
-}
+        function solve_sudoku_puzzle() {
+            //A multidimensional array used to store the given sudoku.  0's represent empty spots.
+            var sudoku = [
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+            ];
+            //Stores the number of 0's indie of sudoku.  
+            var unfilled_boxes = 81;
 
-/*-------------------------------------------------------------------------
-fills a multidimensional array with given information from input fields.  
-Input field with name s00 is treated as sudoku[0][0].
-
-Output: returns the number of empty sudoku spots.
-
-Created around 2/11/15
-Last modified 3/6/15
-/*-------------------------------------------------------------------------*/
-function fill_boxes(sudoku, unfilled_boxes){
-    for(i=0; i<9; i++){
-        for(j=0; j<9; j++){
-            if(document.getElementsByName("s"+i+j)[0].value != ""){
-                 sudoku[i][j] = document.getElementsByName("s"+i+j)[0].value;
-                 unfilled_boxes--;
-            } 
+            unfilled_boxes = fill_boxes(sudoku, unfilled_boxes);
+            if (solve_sudoku(sudoku, unfilled_boxes, "normal")) {
+                set_solved_sudoku(sudoku);
+                print_sudoku(sudoku, true, true);
+            }
         }
-    }
-    return unfilled_boxes;
-}
 
-/*-------------------------------------------------------------------------
-Solves a sudoku puzzle using several different algorithms.  The puzzle is 
-solved when all boxes have been filled with values from 1-9
+        /*-------------------------------------------------------------------------
+        fills a multidimensional array with given information from input fields.  
+        Input field with name s00 is treated as sudoku[0][0].
 
-Input: type can be "normal", "guess", "easy"
+        Output: returns the number of empty sudoku spots.
 
-Output: returns true if the sudoku has been solved and false if the sudoku 
-is unsolvable
+        Created around 2/11/15
+        Last modified 3/6/15
+        /*-------------------------------------------------------------------------*/
+        function fill_boxes(sudoku, unfilled_boxes) {
+            for (i = 0; i < 9; i++) {
+                for (j = 0; j < 9; j++) {
+                    if (document.getElementsByName("s" + i + j)[0].value != "") {
+                        sudoku[i][j] = document.getElementsByName("s" + i + j)[0].value;
+                        unfilled_boxes--;
+                    }
+                }
+            }
+            return unfilled_boxes;
+        }
 
-Created around 2/11/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function solve_sudoku(sudoku, unfilled_boxes, type){
-	//A variable used to determine if a value has been placed.
-    var value_not_placed = true;
-    
-    while(unfilled_boxes > 0){
-        value_not_placed = true;
-        for(var i=0; i<9; i++){ //row
-            for(var j=0; j<9; j++){ //col
-                for(var k=1; k<=9; k++){ //current value being checked
-                    if(check_box_empty(sudoku, i, j)){
-						if(!check_value_placement(sudoku, i, j)){
-							return false;
-						}
-                        if(check_if_value_can_be_placed_placement(sudoku, i, j, k)){
-							if((type == "normal")
-							||
-							(type == "guess")
-							||
-							(type == "medium")
-							||
-							(type == "hard")){
-								if(test_sudoku_placement_method_normal(sudoku, i, j, k)){
-									sudoku[i][j] = k;
-									unfilled_boxes--;
-									value_not_placed = false;
-								}
-							} else if(type == "easy"){
-								if(test_sudoku_placement_method_easy(sudoku, i, j, k)){
-									sudoku[i][j] = k;
-									unfilled_boxes--;
-									value_not_placed = false;
-								}
-							}  else if(type == "medium"){
-								if(test_sudoku_placement_method_medium(sudoku, i, j, k)){
-									sudoku[i][j] = k;
-									unfilled_boxes--;
-									value_not_placed = false;
-								}
-							}
+        /*-------------------------------------------------------------------------
+        Solves a sudoku puzzle using several different algorithms.  The puzzle is 
+        solved when all boxes have been filled with values from 1-9
+
+        Input: type can be "normal", "guess", "easy"
+
+        Output: returns true if the sudoku has been solved and false if the sudoku 
+        is unsolvable
+
+        Created around 2/11/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function solve_sudoku(sudoku, unfilled_boxes, type) {
+            //A variable used to determine if a value has been placed.
+            var value_not_placed = true;
+
+            while (unfilled_boxes > 0) {
+                value_not_placed = true;
+                for (var i = 0; i < 9; i++) { //row
+                    for (var j = 0; j < 9; j++) { //col
+                        for (var k = 1; k <= 9; k++) { //current value being checked
+                            if (check_box_empty(sudoku, i, j)) {
+                                if (!check_value_placement(sudoku, i, j)) {
+                                    return false;
+                                }
+                                if (check_if_value_can_be_placed_placement(sudoku, i, j, k)) {
+                                    if ((type == "normal") ||
+                                        (type == "guess") ||
+                                        (type == "medium") ||
+                                        (type == "hard")) {
+                                        if (test_sudoku_placement_method_normal(sudoku, i, j, k)) {
+                                            sudoku[i][j] = k;
+                                            unfilled_boxes--;
+                                            value_not_placed = false;
+                                        }
+                                    } else if (type == "easy") {
+                                        if (test_sudoku_placement_method_easy(sudoku, i, j, k)) {
+                                            sudoku[i][j] = k;
+                                            unfilled_boxes--;
+                                            value_not_placed = false;
+                                        }
+                                    } else if (type == "medium") {
+                                        if (test_sudoku_placement_method_medium(sudoku, i, j, k)) {
+                                            sudoku[i][j] = k;
+                                            unfilled_boxes--;
+                                            value_not_placed = false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if (value_not_placed && (type == "normal")) {
+                    if (box_guess(sudoku, 1, unfilled_boxes) == false) {
+                        alert("Sudoku puzzle is unsolvable and/or has multiple answers");
+                        return false;
+                    } else {
+                        return true;
+                    }
+                } else if (value_not_placed && (type == "hard")) {
+                    if (box_guess(sudoku, 1, unfilled_boxes) == false) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                } else if (value_not_placed) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /*-------------------------------------------------------------------------
+
+        Created around 3/8/15
+        Last modified 3/9/15
+        -------------------------------------------------------------------------*/
+        function test_sudoku_placement_method_normal(sudoku, i, j, k) {
+            if ((check_if_other_sub_boxes_allow(sudoku, i, j, k)) ||
+                (check_if_other_row_allow(sudoku, i, j, k)) ||
+                (check_if_other_col_allow(sudoku, i, j, k)) ||
+                (check_if_other_values_allow(sudoku, i, j, k))
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+
+        Created around 3/8/15
+        Last modified 3/9/15
+        -------------------------------------------------------------------------*/
+        function test_sudoku_placement_method_guess(sudoku, i, j, k) {
+            if ((check_if_other_sub_boxes_allow(sudoku, i, j, k)) ||
+                (check_if_other_row_allow(sudoku, i, j, k)) ||
+                (check_if_other_col_allow(sudoku, i, j, k)) ||
+                (check_if_other_values_allow(sudoku, i, j, k))
+            ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+
+        Created around 3/8/15
+        Last modified 3/9/15
+        -------------------------------------------------------------------------*/
+        function test_sudoku_placement_method_easy(sudoku, i, j, k) {
+            if (check_if_other_sub_boxes_allow(sudoku, i, j, k)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        Checks if the value can be placed in the current spot based on placement 
+        of other values in the current sub box, current row, and current column
+
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_if_value_can_be_placed_placement(sudoku, row, col, current_value_check) {
+            if (check_current_sub_box(sudoku, row, col, current_value_check)) {
+                if (check_box_row(sudoku, row, col, current_value_check)) {
+                    if (check_box_col(sudoku, row, col, current_value_check)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /*-------------------------------------------------------------------------
+        Checks if other boxes in the sub box allow the current value being looked 
+        at to be entered within them.
+
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_if_other_sub_boxes_allow(sudoku, row, col, current_value_check) {
+            //the left corner of the sub boxes row value
+            var left_corner_row = set_current_left_corner_row(sudoku, row, col);
+            //the left corner of the sub boxes column value
+            var left_corner_col = set_current_left_corner_col(sudoku, row, col);
+
+            for (var i = 0; i <= 2; i++) {
+                for (var j = 0; j <= 2; j++) {
+                    if (!((left_corner_row + i == row) && (left_corner_col + j == col))) {
+                        if (check_box_empty(sudoku, left_corner_row + i, left_corner_col + j)) {
+                            if (check_box_row(sudoku, left_corner_row + i, left_corner_col + j, current_value_check)) {
+                                if (check_box_col(sudoku, left_corner_row + i, left_corner_col + j,
+                                        current_value_check)) {
+                                    return false;
+                                }
+                            }
                         }
                     }
                 }
             }
+            return true;
         }
-        if(value_not_placed && (type=="normal")){
-            if(box_guess(sudoku, 1, unfilled_boxes) == false){
-                alert("Sudoku puzzle is unsolvable and/or has multiple answers");
-                return false;
-            } else {
-                return true;
+
+        /*-------------------------------------------------------------------------
+        looks at numbers 1-9 and determines if they can be placed in a particular 
+        row based on if they are already within that row.
+
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_if_other_row_allow(sudoku, row, col, current_value_check) {
+            for (var j = 0; j < 9; j++) {
+                if (!(j == col)) {
+                    if (check_box_empty(sudoku, row, j)) {
+                        if (check_box_row(sudoku, row, j, current_value_check)) {
+                            if (check_box_col(sudoku, row, j, current_value_check)) {
+                                return false;
+                            }
+                        }
+                    }
+                }
             }
-        } else if(value_not_placed && (type=="hard")){
-			if(box_guess(sudoku, 1, unfilled_boxes) == false){
-                return false;
-            } else {
-                return true;
-            }
-		} else if(value_not_placed){
-			return false;
-		}
-    }
-	return true;
-}
-
-/*-------------------------------------------------------------------------
-
-Created around 3/8/15
-Last modified 3/9/15
--------------------------------------------------------------------------*/
-function test_sudoku_placement_method_normal(sudoku, i, j, k){
-	if((check_if_other_sub_boxes_allow(sudoku, i, j, k))
-		||
-		(check_if_other_row_allow(sudoku, i, j, k)) 
-		||
-		(check_if_other_col_allow(sudoku, i, j, k))
-		||
-		(check_if_other_values_allow(sudoku, i, j, k))
-		){
-			return true;
-	} else {
-		return false;
-	}
-}
-
-/*-------------------------------------------------------------------------
-
-Created around 3/8/15
-Last modified 3/9/15
--------------------------------------------------------------------------*/
-function test_sudoku_placement_method_guess(sudoku, i, j, k){
-	if((check_if_other_sub_boxes_allow(sudoku, i, j, k))
-		||
-		(check_if_other_row_allow(sudoku, i, j, k)) 
-		||
-		(check_if_other_col_allow(sudoku, i, j, k))
-		||
-		(check_if_other_values_allow(sudoku, i, j, k))
-		){
-			return true;
-	} else {
-		return false;
-	}
-}
-
-/*-------------------------------------------------------------------------
-
-Created around 3/8/15
-Last modified 3/9/15
--------------------------------------------------------------------------*/
-function test_sudoku_placement_method_easy(sudoku, i, j, k){
-	if(check_if_other_sub_boxes_allow(sudoku, i, j, k)){
-			return true;
-	} else {
-		return false;
-	}
-}
-
-/*-------------------------------------------------------------------------
-Checks if the value can be placed in the current spot based on placement 
-of other values in the current sub box, current row, and current column
-
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_if_value_can_be_placed_placement(sudoku, row, col, current_value_check){
-    if(check_current_sub_box(sudoku, row, col, current_value_check)){
-        if(check_box_row(sudoku, row, col, current_value_check)){
-           if(check_box_col(sudoku, row, col, current_value_check)){
-                return true;
-            }
+            return true;
         }
-    }
-    return false;
-}
+        /*-------------------------------------------------------------------------
+        looks at numbers 1-9 and determines if they can be placed in a particular 
+        col based on if they are already within that col.
 
-/*-------------------------------------------------------------------------
-Checks if other boxes in the sub box allow the current value being looked 
-at to be entered within them.
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_if_other_col_allow(sudoku, row, col, current_value_check) {
+            for (var i = 0; i < 9; i++) {
+                if (!(i == row)) {
+                    if (check_box_empty(sudoku, i, col)) {
+                        if (check_box_row(sudoku, i, col, current_value_check)) {
+                            if (check_box_col(sudoku, i, col, current_value_check)) {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            return true;
+        }
 
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_if_other_sub_boxes_allow(sudoku, row, col, current_value_check){
-    //the left corner of the sub boxes row value
-    var left_corner_row = set_current_left_corner_row(sudoku, row, col);
-	//the left corner of the sub boxes column value
-    var left_corner_col = set_current_left_corner_col(sudoku, row, col);
-    
-    for(var i=0; i<=2; i++){
-        for(var j=0; j<=2; j++){
-            if(!((left_corner_row+i == row) && (left_corner_col+j == col))){
-                if(check_box_empty(sudoku, left_corner_row+i, left_corner_col+j)){
-                    if(check_box_row(sudoku, left_corner_row+i, left_corner_col+j, current_value_check)){
-                        if(check_box_col(sudoku, left_corner_row+i, left_corner_col+j, current_value_check)){
+        /*-------------------------------------------------------------------------
+        Checks to see if a box can be any other numbers besides the supplied 
+        number.  If not, then the only possible number for that box is the number 
+        that was supplied. 
+
+        Created around 2/11/15
+        Last modified 3/6/15
+        /*-------------------------------------------------------------------------*/
+        function check_if_other_values_allow(sudoku, row, col, current_value_check) {
+            for (var k = 1; k <= 9; k++) {
+                if (!(k == current_value_check)) {
+                    if (check_box_row(sudoku, row, col, k)) {
+                        if (check_box_col(sudoku, row, col, k)) {
                             return false;
                         }
                     }
                 }
             }
+            return true;
         }
-    }
-    return true;
-}
 
-/*-------------------------------------------------------------------------
-looks at numbers 1-9 and determines if they can be placed in a particular 
-row based on if they are already within that row.
+        /*-------------------------------------------------------------------------
+        checks if given current box is empty
 
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_if_other_row_allow(sudoku, row, col, current_value_check){
-    for(var j=0; j<9; j++){
-        if(!(j == col)){
-            if(check_box_empty(sudoku, row, j)){
-                if(check_box_row(sudoku, row, j, current_value_check)){
-                    if(check_box_col(sudoku, row, j, current_value_check)){
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_box_empty(sudoku, row, col) {
+            if (sudoku[row][col] != 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        check if value is already in current sub_box
+
+        Created around 2/11/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function check_current_sub_box(sudoku, row, col, current_value_check) {
+            //the left corner of the sub boxes row value
+            var left_corner_row = set_current_left_corner_row(sudoku, row, col);
+            //the left corner of the sub boxes col value
+            var left_corner_col = set_current_left_corner_col(sudoku, row, col);
+
+            for (var i = 0; i <= 2; i++) {
+                for (var j = 0; j <= 2; j++) {
+                    if (sudoku[left_corner_row + i][left_corner_col + j] == current_value_check) {
                         return false;
                     }
                 }
             }
+            return true;
         }
-    }
-    return true;
-}
-/*-------------------------------------------------------------------------
-looks at numbers 1-9 and determines if they can be placed in a particular 
-col based on if they are already within that col.
 
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_if_other_col_allow(sudoku, row, col, current_value_check){
-    for(var i=0; i<9; i++){
-        if(!(i == row)){
-            if(check_box_empty(sudoku, i, col)){
-                if(check_box_row(sudoku, i, col, current_value_check)){
-                    if(check_box_col(sudoku, i, col, current_value_check)){
-                        return false;
-                    }
+        /*-------------------------------------------------------------------------
+        sets the left corner's row value of the current sub box
+
+        Created around 2/11/15
+        Last modified 3/7/15
+        -------------------------------------------------------------------------*/
+        function set_current_left_corner_row(sudoku, row, col) {
+            var counter = 1;
+            var return_amount = 0;
+            var amount = 3;
+            var test_amount = amount;
+            do {
+
+                if (row <= test_amount - counter) {
+                    return return_amount;
                 }
-            }
+                test_amount += amount;
+                return_amount += amount;
+            } while (amount < 9);
         }
-    }
-    return true;
-}
 
-/*-------------------------------------------------------------------------
-Checks to see if a box can be any other numbers besides the supplied 
-number.  If not, then the only possible number for that box is the number 
-that was supplied. 
+        /*-------------------------------------------------------------------------
+        Sets the left corner's col value of the current sub box
 
-Created around 2/11/15
-Last modified 3/6/15
-/*-------------------------------------------------------------------------*/
-function check_if_other_values_allow(sudoku, row, col, current_value_check){
-    for(var k=1; k<=9; k++){
-        if(!(k == current_value_check)){
-            if(check_box_row(sudoku, row, col, k)){
-                if(check_box_col(sudoku, row, col, k)){
+        Created around 2/11/15
+        Last modified 3/7/15
+        -------------------------------------------------------------------------*/
+        function set_current_left_corner_col(sudoku, row, col) {
+            var counter = 1;
+            var return_amount = 0;
+            var amount = 3;
+            var test_amount = amount;
+            do {
+
+                if (col <= test_amount - counter) {
+                    return return_amount;
+                }
+                test_amount += amount;
+                return_amount += amount;
+            } while (amount < 9);
+        }
+
+        /*-------------------------------------------------------------------------
+        Checks if given current box can have number based on other values in the 
+        row
+
+        Created around 2/11/15
+        Last modified 3/7/15
+        -------------------------------------------------------------------------*/
+        function check_box_row(sudoku, row, col, current_value_check) {
+            for (var i = 0; i < 9; i++) {
+                if (sudoku[row][i] == current_value_check) {
                     return false;
                 }
             }
+            return true;
         }
-    }
-    return true;
-}
 
-/*-------------------------------------------------------------------------
-checks if given current box is empty
+        /*-------------------------------------------------------------------------
+        Checks if given current box can have number based on other values in the 
+        col
 
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_box_empty(sudoku, row, col){
-    if(sudoku[row][col] != 0){
-        return false;
-    } else {
-        return true;
-    }
-}
+        Created around 2/11/15
+        Last modified 3/7/15
+        -------------------------------------------------------------------------*/
+        function check_box_col(sudoku, row, col, current_value_check) {
+            for (var i = 0; i < 9; i++) {
+                if (sudoku[i][col] == current_value_check) {
+                    return false;
+                }
+            }
+            return true;
+        }
 
-/*-------------------------------------------------------------------------
-check if value is already in current sub_box
+        /*-------------------------------------------------------------------------
+        Checks if box can't contain any number.  if it can't, then it is unsolvable
 
-Created around 2/11/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function check_current_sub_box(sudoku, row, col, current_value_check){
-    //the left corner of the sub boxes row value
-    var left_corner_row = set_current_left_corner_row(sudoku, row, col);
-	//the left corner of the sub boxes col value
-    var left_corner_col = set_current_left_corner_col(sudoku, row, col);
-    
-    for(var i=0; i<=2; i++){
-        for(var j=0; j<=2; j++){
-            if(sudoku[left_corner_row+i][left_corner_col+j] == current_value_check){
+        Created around 2/18/15
+        Last modified 3/7/15
+        -------------------------------------------------------------------------*/
+        function check_value_placement(sudoku, row, col) {
+            for (var k = 1; k <= 9; k++) {
+                if (check_if_value_can_be_placed_placement(sudoku, row, col, k)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /*-------------------------------------------------------------------------
+        Throws in a guess as to what a box's value is and solves the sudoku based
+        on that guess.  If the sudoku is solvable, then the guess was correct.  If
+        it is unsolvable, then the guess was incorrect and a different guess will
+        be made.
+         
+        Created around 2/18/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function box_guess(sudoku, guess_amount, unfilled_boxes) {
+            //base case (all possible combinations have been checked)
+            if (unfilled_boxes == guess_amount) {
+                return false;
+            }
+
+            //a variable used to determine if a particular guess was correct.  if correct,
+            var guess_attempt_success = true;
+            //the number of 0's inside of guess_sudoku.
+            var guess_unfilled_boxes = unfilled_boxes;
+            //a multidimensional array used to stroe the guessed sudoku
+            var guess_sudoku = [
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+            ];
+
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    copy_multi_array(sudoku, guess_sudoku);
+                    guess_unfilled_boxes = unfilled_boxes;
+
+                    if (check_box_empty(guess_sudoku, i, j)) {
+                        if (!check_value_placement(guess_sudoku, i, j)) {
+                            return false;
+                        }
+
+                        for (var k = 1; k <= 9; k++) {
+                            guess_attempt_success = true;
+
+                            if (check_if_value_can_be_placed_placement(guess_sudoku, i, j, k)) {
+                                guess_sudoku[i][j] = k;
+                                guess_unfilled_boxes--;
+
+                                if (guess_amount - 1 > 0) {
+                                    if (box_guess(guess_sudoku, guess_amount - 1, guess_unfilled_boxes) == false) {
+                                        guess_attempt_success = false;
+                                        guess_sudoku[i][j] = 0; //reset the box to be empty
+                                        guess_unfilled_boxes++;
+                                    } else {
+                                        return true;
+                                    }
+                                }
+
+                                if (guess_attempt_success && solve_sudoku(guess_sudoku, guess_unfilled_boxes,
+                                        "guess") ==
+                                    true) {
+                                    copy_multi_array(guess_sudoku, sudoku);
+                                    return true;
+                                }
+                            }
+                            if (k == 9) {
+                                //no values allow for the puzzle to be solved.
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            guess_amount++;
+            if (!box_guess(sudoku, guess_amount, unfilled_boxes)) {
                 return false;
             }
         }
-    }
-    return true;
-}
 
-/*-------------------------------------------------------------------------
-sets the left corner's row value of the current sub box
+        /*-------------------------------------------------------------------------
+        Copy a multidimensional array
 
-Created around 2/11/15
-Last modified 3/7/15
--------------------------------------------------------------------------*/
-function set_current_left_corner_row(sudoku, row, col){
-    var counter = 1;
-	var return_amount = 0;
-	var amount = 3;
-	var test_amount =amount;
-	do{
-		
-		if(row <= test_amount-counter){
-			return return_amount;
-		}
-		test_amount+=amount;
-		return_amount+=amount;
-	}while(amount < 9);
-}
-
-/*-------------------------------------------------------------------------
-Sets the left corner's col value of the current sub box
-
-Created around 2/11/15
-Last modified 3/7/15
--------------------------------------------------------------------------*/
-function set_current_left_corner_col(sudoku, row, col){
-    var counter = 1;
-	var return_amount = 0;
-	var amount = 3;
-	var test_amount =amount;
-	do{
-		
-		if(col <= test_amount-counter){
-			return return_amount;
-		}
-		test_amount+=amount;
-		return_amount+=amount;
-	}while(amount < 9);
-}
-
-/*-------------------------------------------------------------------------
-Checks if given current box can have number based on other values in the 
-row
-
-Created around 2/11/15
-Last modified 3/7/15
--------------------------------------------------------------------------*/
-function check_box_row(sudoku, row, col, current_value_check){
-    for(var i=0; i<9; i++){
-        if(sudoku[row][i] == current_value_check){
-            return false;
-        }
-    }
-    return true;
-}
-
-/*-------------------------------------------------------------------------
-Checks if given current box can have number based on other values in the 
-col
-
-Created around 2/11/15
-Last modified 3/7/15
--------------------------------------------------------------------------*/
-function check_box_col(sudoku, row, col, current_value_check){
-    for(var i=0; i<9; i++){
-        if(sudoku[i][col] == current_value_check){
-            return false;
-        }
-    }
-    return true;
-}
-
-/*-------------------------------------------------------------------------
-Checks if box can't contain any number.  if it can't, then it is unsolvable
-
-Created around 2/18/15
-Last modified 3/7/15
--------------------------------------------------------------------------*/
-function check_value_placement(sudoku, row, col){
-    for(var k=1; k<=9; k++){
-        if(check_if_value_can_be_placed_placement(sudoku, row, col, k)){
-            return true;
-        }
-    }
-    return false;
-}
-
-/*-------------------------------------------------------------------------
-Throws in a guess as to what a box's value is and solves the sudoku based
-on that guess.  If the sudoku is solvable, then the guess was correct.  If
-it is unsolvable, then the guess was incorrect and a different guess will
-be made.
- 
-Created around 2/18/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function box_guess(sudoku, guess_amount, unfilled_boxes){
-    //base case (all possible combinations have been checked)
-	if(unfilled_boxes == guess_amount){ 
-        return false;
-    }
-    
-	//a variable used to determine if a particular guess was correct.  if correct,
-    var guess_attempt_success = true;
-	//the number of 0's inside of guess_sudoku.
-    var guess_unfilled_boxes = unfilled_boxes;
-	//a multidimensional array used to stroe the guessed sudoku
-    var guess_sudoku = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
-    
-    for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-            copy_multi_array(sudoku, guess_sudoku);
-            guess_unfilled_boxes = unfilled_boxes;
-            
-            if(check_box_empty(guess_sudoku, i, j)){
-                if(!check_value_placement(guess_sudoku, i, j)){
-                        return false;
+        Created around 2/18/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function copy_multi_array(sudoku, sudoku_copy) {
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    sudoku_copy[i][j] = sudoku[i][j];
                 }
-				
-                for(var k=1; k<=9; k++){
-                    guess_attempt_success = true;
-                
-                    if(check_if_value_can_be_placed_placement(guess_sudoku, i, j, k)){                        
-                        guess_sudoku[i][j] = k;
-                        guess_unfilled_boxes--;
-                        
-                        if(guess_amount-1 > 0){ 
-                            if(box_guess(guess_sudoku, guess_amount-1, guess_unfilled_boxes) == false){
-                                guess_attempt_success = false;
-								guess_sudoku[i][j] = 0;//reset the box to be empty
-								guess_unfilled_boxes++;
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        Prints out the answers to the sudoku.
+
+        Input and Output: color is set to the color that the output shall be 
+        printed in.  If show_original is set to true the puzzle will show the 
+        original unfiled sudoku boxes in black.  If not, then the color of the 
+        original boxes will be set to the given color.  If show_guesses is set to 
+        true, then the guesses supplied by the user will remain the color of the 
+        guess color.  If show_guesses is set to false, then all guesses in the 
+        puzzle will be set to the color of the supplied color.
+
+        Created 3/6/15
+        Last modified 3/6/15
+        -------------------------------------------------------------------------*/
+        function print_sudoku(sudoku, show_original, show_guesses) {
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    if (show_original) {
+                        if (show_guesses) {
+                            if (document.getElementsByName("s" + i + j)[0].style.color == "yellow") {
+                                document.getElementsByName("s" + i + j)[0].style.color = "yellow";
+                            } else if (unsolved_sudoku[i][j] != 0) {
+                                document.getElementsByName("s" + i + j)[0].style.color = "black";
                             } else {
+                                document.getElementsByName("s" + i + j)[0].style.color = "green";
+                            }
+                        } else {
+                            if (unsolved_sudoku[i][j] != 0) {
+                                document.getElementsByName("s" + i + j)[0].style.color = "black";
+                            } else {
+                                document.getElementsByName("s" + i + j)[0].style.color = "green";
+                            }
+                        }
+                    } else if (show_guesses) {
+                        if (document.getElementsByName("s" + i + j)[0].style.color == "yellow") {
+                            document.getElementsByName("s" + i + j)[0].style.color = "yellow";
+                        } else {
+                            document.getElementsByName("s" + i + j)[0].style.color = "green";
+                        }
+                    } else {
+                        document.getElementsByName("s" + i + j)[0].style.color = "green";
+                    }
+                    document.getElementsByName("s" + i + j)[0].value = sudoku[i][j];
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        Clear the puzzle
+
+        Created around 2/11/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function clear_sudoku_puzzle() {
+            last_focused_box = "null";
+            var input_id = "s";
+
+            for (i = 0; i < 9; i++) {
+                for (j = 0; j < 9; j++) {
+                    input_id = "s" + i + j;
+                    solved_sudoku[i][j] = 0;
+                    unsolved_sudoku[i][j] = 0;
+                    document.getElementsByName(input_id)[0].style.color = "black";
+                    document.getElementsByName(input_id)[0].value = "";
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        Fills the squares on the screen with a solvable sudoku puzzle
+
+        Created 2/25/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function generate_sudoku() {
+            clear_sudoku_puzzle();
+            var sudoku = [
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+            ];
+            generate_filled_sudoku(sudoku, 0, 0);
+            set_solved_sudoku(sudoku);
+            ask_user_for_sudoku_difficulty_level(sudoku);
+
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+                    unsolved_sudoku[i][j] = sudoku[i][j];
+                }
+            }
+        }
+
+        /*-------------------------------------------------------------------------
+        Generate a filled sudoku puzzle
+
+        Created 2/25/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function generate_filled_sudoku(sudoku, row, col) {
+            //used to determine which values (1-9) have been placed in the particular spot.
+            var placed_numbers = ['0', '0', '0', '0', '0', '0', '0', '0', '0'];
+            //current value being looked at (1-9)
+            var current_value_check;
+            //the next column in the sudoku (moving from left to right and top to bottom)
+            var next_col = col;
+            //the next row in the sudoku (moving from left to right and top to bottom)
+            var next_row = row;
+            //a variable used to determine if the current value being looked at can be used to create a sudoku.
+            var test_if_number_works = false;
+            //the amount of values that have been tested for a given sudoku box.
+            var previously_tested_values = 0;
+
+            if (col < 8) {
+                next_col++;
+            } else {
+                next_col = 0;
+                if (row < 8) {
+                    next_row++;
+                }
+            }
+
+            do {
+                sudoku[row][col] = 0;
+                current_value_check = Math.floor((Math.random() * 10) + 1);
+
+                if (previously_tested_values == 9) {
+                    return false;
+                }
+
+                if (current_value_check == 10) {
+                    test_if_number_works = false;
+                } else {
+                    if (placed_numbers[current_value_check - 1] == 0) {
+                        placed_numbers[current_value_check - 1] = 1;
+                        test_if_number_works = true;
+                        previously_tested_values++;
+
+                        if (!check_if_value_can_be_placed_placement(sudoku, row, col, current_value_check)) {
+                            test_if_number_works = false;
+                        } else {
+                            test_if_number_works = true;
+                            sudoku[row][col] = current_value_check;
+
+                            if (row == 8 && col == 8) {
                                 return true;
                             }
                         }
-						
-                        if(guess_attempt_success && solve_sudoku(guess_sudoku, guess_unfilled_boxes, "guess") == true){
-							copy_multi_array(guess_sudoku, sudoku);
-                            return true;
-                        }
-                    }
-                    if(k==9){
-                        //no values allow for the puzzle to be solved.
-                        return false;
-                    }
-                } 
-            } 
-        }
-    }
-    guess_amount++;
-    if(!box_guess(sudoku, guess_amount, unfilled_boxes)){
-        return false;
-    }
-}
-
-/*-------------------------------------------------------------------------
-Copy a multidimensional array
-
-Created around 2/18/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function copy_multi_array(sudoku, sudoku_copy){
-    for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-            sudoku_copy[i][j] = sudoku[i][j];     
-        }
-    }
-}
-
-/*-------------------------------------------------------------------------
-Prints out the answers to the sudoku.
-
-Input and Output: color is set to the color that the output shall be 
-printed in.  If show_original is set to true the puzzle will show the 
-original unfiled sudoku boxes in black.  If not, then the color of the 
-original boxes will be set to the given color.  If show_guesses is set to 
-true, then the guesses supplied by the user will remain the color of the 
-guess color.  If show_guesses is set to false, then all guesses in the 
-puzzle will be set to the color of the supplied color.
-
-Created 3/6/15
-Last modified 3/6/15
--------------------------------------------------------------------------*/
-function print_sudoku(sudoku, show_original, show_guesses){
-	for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-			if(show_original){
-				if(show_guesses){
-					if(document.getElementsByName("s"+i+j)[0].style.color == "yellow"){
-						document.getElementsByName("s"+i+j)[0].style.color = "yellow";
-					} else if(unsolved_sudoku[i][j] != 0){
-						document.getElementsByName("s"+i+j)[0].style.color = "black";
-					} else {
-						document.getElementsByName("s"+i+j)[0].style.color = "green";
-					}
-				} else {
-					if(unsolved_sudoku[i][j] != 0){
-						document.getElementsByName("s"+i+j)[0].style.color = "black";
-					} else {
-						document.getElementsByName("s"+i+j)[0].style.color = "green";
-					}
-				}
-			} else if(show_guesses){
-				if(document.getElementsByName("s"+i+j)[0].style.color == "yellow"){
-					document.getElementsByName("s"+i+j)[0].style.color = "yellow";
-				} else {
-					document.getElementsByName("s"+i+j)[0].style.color = "green";
-				}
-			} else {
-				document.getElementsByName("s"+i+j)[0].style.color = "green";
-			}
-			document.getElementsByName("s"+i+j)[0].value = sudoku[i][j];
-        }
-    }
-}
-
-/*-------------------------------------------------------------------------
-Clear the puzzle
-
-Created around 2/11/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function clear_sudoku_puzzle(){
-    last_focused_box = "null";
-    var input_id = "s";
-    
-    for(i=0; i<9; i++){
-        for(j=0; j<9; j++){
-            input_id = "s" + i + j;
-            solved_sudoku[i][j] = 0;
-            unsolved_sudoku[i][j] = 0;
-            document.getElementsByName(input_id)[0].style.color = "black";
-            document.getElementsByName(input_id)[0].value = "";
-        } 
-    }
-}
-
-/*-------------------------------------------------------------------------
-Fills the squares on the screen with a solvable sudoku puzzle
-
-Created 2/25/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function generate_sudoku(){
-    clear_sudoku_puzzle();
-    var sudoku = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
-    generate_filled_sudoku(sudoku, 0, 0);
-	set_solved_sudoku(sudoku);
-    ask_user_for_sudoku_difficulty_level(sudoku);
-	
-	for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-            unsolved_sudoku[i][j] = sudoku[i][j];
-        }
-    }
-}
-
-/*-------------------------------------------------------------------------
-Generate a filled sudoku puzzle
-
-Created 2/25/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function generate_filled_sudoku(sudoku, row, col){
-	//used to determine which values (1-9) have been placed in the particular spot.
-    var placed_numbers = ['0', '0', '0', '0', '0', '0', '0', '0', '0'];
-	//current value being looked at (1-9)
-    var current_value_check;
-	//the next column in the sudoku (moving from left to right and top to bottom)
-    var next_col = col;
-	//the next row in the sudoku (moving from left to right and top to bottom)
-    var next_row = row;
-	//a variable used to determine if the current value being looked at can be used to create a sudoku.
-    var test_if_number_works = false;
-	//the amount of values that have been tested for a given sudoku box.
-    var previously_tested_values = 0;
-    
-    if(col<8){
-        next_col++;
-    } else {
-        next_col = 0;
-        if(row<8){
-            next_row++;
-        }
-    }
-
-    do{
-        sudoku[row][col] = 0;
-        current_value_check=Math.floor((Math.random() * 10) + 1);
-                
-        if(previously_tested_values == 9){            
-            return false;
-        }
-        
-        if(current_value_check == 10){
-            test_if_number_works = false;
-        } else {
-            if(placed_numbers[current_value_check-1] == 0){
-                placed_numbers[current_value_check-1] = 1;
-                test_if_number_works = true;
-                previously_tested_values++;
-                
-                if(!check_if_value_can_be_placed_placement(sudoku, row, col, current_value_check)){
-                    test_if_number_works = false;
-                } else {
-                    test_if_number_works = true;
-                    sudoku[row][col] = current_value_check;
-                    
-                    if(row == 8 && col == 8){
-                        return true;
+                    } else {
+                        test_if_number_works = false;
                     }
                 }
-            } else {
-                test_if_number_works = false;
-            }  
-        } 
-    }while((!test_if_number_works) || !(generate_filled_sudoku(sudoku, next_row, next_col)));
-    return true;
-}
-
-/*-------------------------------------------------------------------------
-Ask the user how difficult they want the puzzle to be.
-
-Created 3/2/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function ask_user_for_sudoku_difficulty_level(sudoku){
-    var difficulty_level= prompt("Please enter the difficulty level you wish to play at.  \nThis could be easy, medium, or hard", "easy");
-	if (difficulty_level == "easy") {
-        generate_unsolved_sudoku(sudoku, "easy");
-    } else if (difficulty_level == "medium") {
-        generate_unsolved_sudoku(sudoku, "medium");
-    } else if (difficulty_level == "hard") {
-        generate_unsolved_sudoku(sudoku, "hard");
-    } else {
-        ask_user_for_sudoku_difficulty_level(sudoku);
-    }
-}
-
-/*-------------------------------------------------------------------------
-//generate an unvolved sudoku problem which is easy to solve
-
-Created 3/2/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function generate_unsolved_sudoku(sudoku, type){
-	//used to store which boxes have been looked at.
-    var sudoku_boxes_checked = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
-	//used as a copy of the sudoku which can be manipulated and checked to see if, when a value is taken away, the sudoku can still be solved
-    var sudoku_copy = [
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '0', '0', '0', '0']
-    ];
-	//Stores the number of 0's inside of a sudoku. 
-    var unfilled_boxes = 0;
-	//the number of boxes checked (up to 81)
-    var number_of_sudoku_boxes_checked = 0;
-	//the value of the row randomly chosen
-    var random_row = 0;
-    ////the value of the column randomly chosen
-	var random_col = 0;
-	//the value of the box currently being looked at
-    var current_value_of_current_box_being_checked = 0;
-	
-    while(number_of_sudoku_boxes_checked < 81){
-        
-        do{
-            random_row=Math.floor((Math.random() * 10));
-        }while(random_row == 9);
-        do{
-            random_col=Math.floor((Math.random() * 10));
-        }while(random_col == 9);
-        
-        if(sudoku_boxes_checked[random_row][random_col] == 0){
-            current_value_of_current_box_being_checked = sudoku[random_row][random_col];
-            sudoku[random_row][random_col] = 0;
-            sudoku_boxes_checked[random_row][random_col] = 1;
-            number_of_sudoku_boxes_checked++;
-            unfilled_boxes++;
-            copy_multi_array(sudoku, sudoku_copy);
-            
-            if(!solve_sudoku(sudoku_copy, unfilled_boxes, type)){
-                
-                sudoku[random_row][random_col] = current_value_of_current_box_being_checked;
-                
-                unfilled_boxes--;
-                document.getElementsByName("s"+random_row+random_col)[0].style.color = "black";
-                document.getElementsByName("s"+random_row+random_col)[0].value = current_value_of_current_box_being_checked;
-            } else{
-                //alert("now removing s"+random_row+random_col);
-                document.getElementsByName("s"+random_row+random_col)[0].value = "";
-            }
-        } else {
-            //alert("last seen was 1");
+            } while ((!test_if_number_works) || !(generate_filled_sudoku(sudoku, next_row, next_col)));
+            return true;
         }
-        
-         
-    }
-    
-}
 
+        /*-------------------------------------------------------------------------
+        Ask the user how difficult they want the puzzle to be.
 
-
-/*-------------------------------------------------------------------------
-Changes the color of the input for all unfilled boxes
-
-Created 3/2/15
-Last modified 3/8/15
-/*-------------------------------------------------------------------------*/
-function user_guess(){
-    var input_id = "s";
-    
-    for(i=0; i<9; i++){
-        for(j=0; j<9; j++){
-            input_id = "s" + i + j;
-            
-            if(document.getElementsByName(input_id)[0].value == ""){
-                document.getElementsByName(input_id)[0].style.color = "yellow";
-            }
-        } 
-    }
-}
-
-
-
-/*-------------------------------------------------------------------------
-Clears all guesses made
-
-Created 3/2/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function clear_guesses(){
-    for(var i=0; i<9; i++){
-        for(var j=0; j<9; j++){
-            
-            if((document.getElementsByName("s"+i+j)[0].value != unsolved_sudoku[i][j])
-			||
-			(document.getElementsByName("s"+i+j)[0].value=="")){
-                document.getElementsByName("s"+i+j)[0].style.color = "black";
-                document.getElementsByName("s"+i+j)[0].value = "";
+        Created 3/2/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function ask_user_for_sudoku_difficulty_level(sudoku) {
+            var difficulty_level = prompt(
+                "Please enter the difficulty level you wish to play at.  \nThis could be easy, medium, or hard",
+                "easy");
+            if (difficulty_level == "easy") {
+                generate_unsolved_sudoku(sudoku, "easy");
+            } else if (difficulty_level == "medium") {
+                generate_unsolved_sudoku(sudoku, "medium");
+            } else if (difficulty_level == "hard") {
+                generate_unsolved_sudoku(sudoku, "hard");
             } else {
-				document.getElementsByName("s"+i+j)[0].value = unsolved_sudoku[i][j];
-			}
-            
-            
+                ask_user_for_sudoku_difficulty_level(sudoku);
+            }
         }
-    }
-    
-}
 
-/*-------------------------------------------------------------------------    
-A variable used to identify which box (sij) was last put into focus.
+        /*-------------------------------------------------------------------------
+        //generate an unvolved sudoku problem which is easy to solve
 
-initialized: snn stands for sudoku[null][null]
+        Created 3/2/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function generate_unsolved_sudoku(sudoku, type) {
+            //used to store which boxes have been looked at.
+            var sudoku_boxes_checked = [
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+            ];
+            //used as a copy of the sudoku which can be manipulated and checked to see if, when a value is taken away, the sudoku can still be solved
+            var sudoku_copy = [
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0'],
+                ['0', '0', '0', '0', '0', '0', '0', '0', '0']
+            ];
+            //Stores the number of 0's inside of a sudoku. 
+            var unfilled_boxes = 0;
+            //the number of boxes checked (up to 81)
+            var number_of_sudoku_boxes_checked = 0;
+            //the value of the row randomly chosen
+            var random_row = 0;
+            ////the value of the column randomly chosen
+            var random_col = 0;
+            //the value of the box currently being looked at
+            var current_value_of_current_box_being_checked = 0;
 
-Created 3/6/15
-Last modified 3/4/15
--------------------------------------------------------------------------*/
-var last_focused_box = "snn";
+            while (number_of_sudoku_boxes_checked < 81) {
 
-/*-------------------------------------------------------------------------    
-Set's the last_focused_box to the last box put in focus
+                do {
+                    random_row = Math.floor((Math.random() * 10));
+                } while (random_row == 9);
+                do {
+                    random_col = Math.floor((Math.random() * 10));
+                } while (random_col == 9);
 
-input: box_name is the name of a box (sij)
+                if (sudoku_boxes_checked[random_row][random_col] == 0) {
+                    current_value_of_current_box_being_checked = sudoku[random_row][random_col];
+                    sudoku[random_row][random_col] = 0;
+                    sudoku_boxes_checked[random_row][random_col] = 1;
+                    number_of_sudoku_boxes_checked++;
+                    unfilled_boxes++;
+                    copy_multi_array(sudoku, sudoku_copy);
 
-Created 3/9/15
-Last modified 3/9/15
--------------------------------------------------------------------------*/
-function set_last_focused_box(box_name){
-	last_focused_box = box_name;
-}
+                    if (!solve_sudoku(sudoku_copy, unfilled_boxes, type)) {
 
-/*-------------------------------------------------------------------------
-When an arrow is pressed, the next input field will be focused...
+                        sudoku[random_row][random_col] = current_value_of_current_box_being_checked;
 
-Created 3/6/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function move_to_arrowed_box(e){
-	var row = last_focused_box.charAt(1);
-	var col = last_focused_box.charAt(2);
-	
-    if(e.keyCode == '38'){				//up arrow
-		if(row == 0){
-			row = 8;
-		} else {
-			row--;
-		}
-		last_focused_box="s"+row+col;
-		document.getElementsByName(last_focused_box)[0].focus();
-		
-	}
-    else if (e.keyCode == '40') {       // down arrow
-		if(row == 8){
-				row = 0;
-			} else {
-				row++;
-		}
-		last_focused_box="s"+row+col;
-		document.getElementsByName(last_focused_box)[0].focus();
-		
-    }
-    else if (e.keyCode == '37') {       // left arrow
-		if(col == 0){
-			col = 8;
-		} else {
-			col--;
-		}
-		last_focused_box="s"+row+col;
-		document.getElementsByName(last_focused_box)[0].focus();
-		
-    }
-    else if (e.keyCode == '39') {       // right arrow
-		if(col == 8){
-			col = 0;
-		} else {
-			col++;
-		}
-		last_focused_box="s"+row+col;
-		document.getElementsByName(last_focused_box)[0].focus();
-		
-    } else {
-		
-	}
-	
-	
-}
+                        unfilled_boxes--;
+                        document.getElementsByName("s" + random_row + random_col)[0].style.color = "black";
+                        document.getElementsByName("s" + random_row + random_col)[0].value =
+                            current_value_of_current_box_being_checked;
+                    } else {
+                        //alert("now removing s"+random_row+random_col);
+                        document.getElementsByName("s" + random_row + random_col)[0].value = "";
+                    }
+                } else {
+                    //alert("last seen was 1");
+                }
 
 
-/*-------------------------------------------------------------------------
-Sets the current sudoku given as the unsolved sudoku.
+            }
 
-Created 3/6/15
-Last modified 3/8/15
--------------------------------------------------------------------------*/
-function set_unsolved_sudoku(){
-	for(i=0; i<9; i++){
-		for(j=0; j<9; j++){
-			if(document.getElementsByName("s"+i+j)[0].value != ""){
-				 unsolved_sudoku[i][j] = document.getElementsByName("s"+i+j)[0].value;
-			} 
-		}
-	}
-}
-    
-</script>
+        }
+
+
+
+        /*-------------------------------------------------------------------------
+        Changes the color of the input for all unfilled boxes
+
+        Created 3/2/15
+        Last modified 3/8/15
+        /*-------------------------------------------------------------------------*/
+        function user_guess() {
+            var input_id = "s";
+
+            for (i = 0; i < 9; i++) {
+                for (j = 0; j < 9; j++) {
+                    input_id = "s" + i + j;
+
+                    if (document.getElementsByName(input_id)[0].value == "") {
+                        document.getElementsByName(input_id)[0].style.color = "yellow";
+                    }
+                }
+            }
+        }
+
+
+
+        /*-------------------------------------------------------------------------
+        Clears all guesses made
+
+        Created 3/2/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function clear_guesses() {
+            for (var i = 0; i < 9; i++) {
+                for (var j = 0; j < 9; j++) {
+
+                    if ((document.getElementsByName("s" + i + j)[0].value != unsolved_sudoku[i][j]) ||
+                        (document.getElementsByName("s" + i + j)[0].value == "")) {
+                        document.getElementsByName("s" + i + j)[0].style.color = "black";
+                        document.getElementsByName("s" + i + j)[0].value = "";
+                    } else {
+                        document.getElementsByName("s" + i + j)[0].value = unsolved_sudoku[i][j];
+                    }
+
+
+                }
+            }
+
+        }
+
+        /*-------------------------------------------------------------------------    
+        A variable used to identify which box (sij) was last put into focus.
+
+        initialized: snn stands for sudoku[null][null]
+
+        Created 3/6/15
+        Last modified 3/4/15
+        -------------------------------------------------------------------------*/
+        var last_focused_box = "snn";
+
+        /*-------------------------------------------------------------------------    
+        Set's the last_focused_box to the last box put in focus
+
+        input: box_name is the name of a box (sij)
+
+        Created 3/9/15
+        Last modified 3/9/15
+        -------------------------------------------------------------------------*/
+        function set_last_focused_box(box_name) {
+            last_focused_box = box_name;
+        }
+
+        /*-------------------------------------------------------------------------
+        When an arrow is pressed, the next input field will be focused...
+
+        Created 3/6/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function move_to_arrowed_box(e) {
+            var row = last_focused_box.charAt(1);
+            var col = last_focused_box.charAt(2);
+
+            if (e.keyCode == '38') { //up arrow
+                if (row == 0) {
+                    row = 8;
+                } else {
+                    row--;
+                }
+                last_focused_box = "s" + row + col;
+                document.getElementsByName(last_focused_box)[0].focus();
+
+            } else if (e.keyCode == '40') { // down arrow
+                if (row == 8) {
+                    row = 0;
+                } else {
+                    row++;
+                }
+                last_focused_box = "s" + row + col;
+                document.getElementsByName(last_focused_box)[0].focus();
+
+            } else if (e.keyCode == '37') { // left arrow
+                if (col == 0) {
+                    col = 8;
+                } else {
+                    col--;
+                }
+                last_focused_box = "s" + row + col;
+                document.getElementsByName(last_focused_box)[0].focus();
+
+            } else if (e.keyCode == '39') { // right arrow
+                if (col == 8) {
+                    col = 0;
+                } else {
+                    col++;
+                }
+                last_focused_box = "s" + row + col;
+                document.getElementsByName(last_focused_box)[0].focus();
+
+            } else {
+
+            }
+
+
+        }
+
+
+        /*-------------------------------------------------------------------------
+        Sets the current sudoku given as the unsolved sudoku.
+
+        Created 3/6/15
+        Last modified 3/8/15
+        -------------------------------------------------------------------------*/
+        function set_unsolved_sudoku() {
+            for (i = 0; i < 9; i++) {
+                for (j = 0; j < 9; j++) {
+                    if (document.getElementsByName("s" + i + j)[0].value != "") {
+                        unsolved_sudoku[i][j] = document.getElementsByName("s" + i + j)[0].value;
+                    }
+                }
+            }
+        }
+    </script>
 
 </head>
 
-<body style="margin:0px; padding:0px; clear:left; background-image: url('https://31.media.tumblr.com/854da75f446117e54044533c5fc07ac6/tumblr_mzvn2lGGJ91rr18yxo1_400.jpg');" onload="clear_sudoku_puzzle()" onkeydown="move_to_arrowed_box(window.event)">
-<div id="outer_wrapper">
-    <div id="inner_div">
-        
-        
-            
-        <div id="information_section">
-            <H1 style="text-align: center;" id="sudoku">~~~~~~~~~~~Sudoku Program~~~~~~~~~~~~</H1>
-            
-         
-            
-            
-            <input type="submit" value="Generate Sudoku" onclick="generate_sudoku()">
-			<input type="submit" value="Set Sudoku" onclick="set_unsolved_sudoku()">
-            <input type="submit" value="Solve" onclick="solve_sudoku_puzzle()">
-            <input type="submit" value="Clear All" onclick="clear_sudoku_puzzle()"><!--
+<body
+    style="margin:0px; padding:0px; clear:left; background-image: url('https://31.media.tumblr.com/854da75f446117e54044533c5fc07ac6/tumblr_mzvn2lGGJ91rr18yxo1_400.jpg');"
+    onload="clear_sudoku_puzzle()" onkeydown="move_to_arrowed_box(window.event)">
+    <div id="outer_wrapper">
+        <div id="inner_div">
+
+
+
+            <div id="information_section">
+                <H1 style="text-align: center;" id="sudoku">~~~~~~~~~~~Sudoku Program~~~~~~~~~~~~</H1>
+
+
+
+
+                <input type="submit" value="Generate Sudoku" onclick="generate_sudoku()">
+                <input type="submit" value="Set Sudoku" onclick="set_unsolved_sudoku()">
+                <input type="submit" value="Solve" onclick="solve_sudoku_puzzle()">
+                <input type="submit" value="Clear All" onclick="clear_sudoku_puzzle()">
+                <!--
             <input type="submit" value="Hard" onclick="set_up_hard()">
             <input type="submit" value="Evil" onclick="set_up_evil()">-->
-            
-            <input type="submit" value="Add Guess" onclick="user_guess()">
-            <input type="submit" value="Clear Guesses" onclick="clear_guesses()">
-            
-            <div id="sudoku_holder">
-                <input type="text" name="s00" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_left" value="1"><!--
-                --><input type="text" name="s01" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"  value="2"><!--
-                --><input type="text" name="s02" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right" ><!--
-                --><input type="text" name="s03" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s04" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top" value="9"><!--
-                --><input type="text" name="s05" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right" value="7"><!--
-                --><input type="text" name="s06" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s07" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top" value="4"><!--
-                --><input type="text" name="s08" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right"><!-- -->
+
+                <input type="submit" value="Add Guess" onclick="user_guess()">
+                <input type="submit" value="Clear Guesses" onclick="clear_guesses()">
+
+                <div id="sudoku_holder">
+                    <input type="text" name="s00" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_left" value="1">
+                    <input type="text" name="s01" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top" value="2">
+                    <input type="text" name="s02" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right">
+                    <input type="text" name="s03" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s04" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top" value="9">
+                    <input type="text" name="s05" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right" value="7">
+                    <input type="text" name="s06" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s07" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top" value="4">
+                    <input type="text" name="s08" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right">
+
+                    <input type="text" name="s10" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left" value="7">
+                    <input type="text" name="s11" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s12" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right" value="6">
+                    <input type="text" name="s13" value="4" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s14" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s15" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s16" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s17" value="5" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s18" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+
+                    <input type="text" name="s20" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left" value="9">
+                    <input type="text" name="s21" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s22" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s23" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s24" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s25" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s26" value="1" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s27" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s28" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+
+                    <input type="text" name="s30" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_left">
+                    <input type="text" name="s31" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top" value="7">
+                    <input type="text" name="s32" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right" value="1">
+                    <input type="text" name="s33" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s34" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top" value="2">
+                    <input type="text" name="s35" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right">
+                    <input type="text" name="s36" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s37" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s38" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right" value="5">
+
+                    <input type="text" name="s40" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left">
+                    <input type="text" name="s41" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s42" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s43" value="7" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s44" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s45" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right" value="4">
+                    <input type="text" name="s46" value="2" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s47" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s48" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+
+                    <input type="text" name="s50" value="4" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left">
+                    <input type="text" name="s51" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s52" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s53" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s54" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s55" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s56" value="9" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s57" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s58" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+
+                    <input type="text" name="s60" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_left">
+                    <input type="text" name="s61" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s62" value="7" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right">
+                    <input type="text" name="s63" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s64" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s65" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right">
+                    <input type="text" name="s66" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s67" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top">
+                    <input type="text" name="s68" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_top sudoku_right" value="6">
+
+                    <input type="text" name="s70" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left">
+                    <input type="text" name="s71" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s72" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right">
+                    <input type="text" name="s73" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s74" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s75" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right" value="1">
+                    <input type="text" name="s76" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s77" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input">
+                    <input type="text" name="s78" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right" value="4">
+
+                    <input type="text" name="s80" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_left sudoku_bottom">
+                    <input type="text" name="s81" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_bottom" value="5">
+                    <input type="text" name="s82" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right sudoku_bottom">
+                    <input type="text" name="s83" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_bottom" value="9">
+                    <input type="text" name="s84" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_bottom" value="6">
+                    <input type="text" name="s85" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right sudoku_bottom">
+                    <input type="text" name="s86" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_bottom">
+                    <input type="text" name="s87" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_bottom" value="1">
+                    <input type="text" name="s88" maxlength="1" onfocus="set_last_focused_box(this.name)"
+                        class="sudoku_input sudoku_right sudoku_bottom" value="8">
+                    <br>
+                </div>
                 
-                <input type="text" name="s10" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_left"  value="7"><!--
-                --><input type="text" name="s11" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s12" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right"  value="6"><!--
-                --><input type="text" name="s13" value="4" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s14" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s15" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right"><!--
-                --><input type="text" name="s16" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s17" value="5" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s18" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right">
-                
-                <input type="text" name="s20" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_left" value="9"><!--
-                --><input type="text" name="s21" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s22" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right"><!--
-                --><input type="text" name="s23" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s24" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s25" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right"><!--
-                --><input type="text" name="s26" value="1" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s27" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s28" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right">
-                
-                <input type="text" name="s30" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_left"><!--
-                --><input type="text" name="s31" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top" value="7"><!--
-                --><input type="text" name="s32" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right" value="1"><!--
-                --><input type="text" name="s33" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s34" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top" value="2"><!--
-                --><input type="text" name="s35" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right"><!--
-                --><input type="text" name="s36" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s37" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s38" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right" value="5"><!-- -->
-                
-                <input type="text" name="s40" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_left"><!--
-                --><input type="text" name="s41" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s42" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right" value="3"><!--
-                --><input type="text" name="s43" value="7" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s44" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s45" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right" value="4"><!--
-                --><input type="text" name="s46" value="2" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s47" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s48" class="sudoku_right" maxlength="1" onfocus="set_last_focused_box(this.name)" >
-                
-                <input type="text" name="s50" class="sudoku_left" value="4" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s51" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s52" class="sudoku_right" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s53" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s54" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s55" class="sudoku_right" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s56" value="9" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s57" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s58" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right">
-                
-                <input type="text" name="s60" class="sudoku_top sudoku_left" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s61" class="sudoku_top" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s62" class="sudoku_top sudoku_right" value="7" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s63" class="sudoku_top" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s64" class="sudoku_top" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s65" class="sudoku_top sudoku_right" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s66" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s67" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top"><!--
-                --><input type="text" name="s68" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_top sudoku_right" value="6"><!-- -->
-                
-                <input type="text" name="s70" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_left"><!--
-                --><input type="text" name="s71" value="8" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s72" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right"><!--
-                --><input type="text" name="s73" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s74" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s75" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right" value="1"><!--
-                --><input type="text" name="s76" value="3" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s77" maxlength="1" onfocus="set_last_focused_box(this.name)" ><!--
-                --><input type="text" name="s78" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right" value="4">
-                
-                <input type="text" name="s80" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_left sudoku_bottom" ><!--
-                --><input type="text" name="s81" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_bottom" value="5"><!--
-                --><input type="text" name="s82" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right sudoku_bottom"><!--
-                --><input type="text" name="s83" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_bottom" value="9"><!--
-                --><input type="text" name="s84" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_bottom" value="6"><!--
-                --><input type="text" name="s85" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right sudoku_bottom"><!--
-                --><input type="text" name="s86" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_bottom"><!--
-                --><input type="text" name="s87" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_bottom"  value="1"><!--
-                --><input type="text" name="s88" maxlength="1" onfocus="set_last_focused_box(this.name)" class="sudoku_right sudoku_bottom" value="8">
-                <br>
+                <div id="sudoku_holder"> Hope you enjoy
+                    <div></div><br>
+                    <br>
+                </div>
             </div>
-            <H1 style="text-align: center;" id="sudoku">~~~~~~~~~~~Sudoku Program~~~~~~~~~~~~</H1>
-            
-            <div id="sudoku_holder"><a href="http://all-that-you-can-s333.tumblr.com/projects/large_suoku_generator">Click Here to view n^2 x n^2 Sudoku generator and solver.</a><div></div><br>
-            <br>
         </div>
-    </div>
-    
-
-</div>
-
-
-
 </body>
+
 </html>
