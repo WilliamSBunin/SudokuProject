@@ -295,7 +295,7 @@ set_unsolved_sudoku()									n^2
 		Last modified 3/26/15
 		-------------------------------------------------------------------------*/
 		function print_junk_check_point() {
-			alert(program_log);
+			// alert(program_log);
 		}
 
 		/*-------------------------------------------------------------------------
@@ -1439,11 +1439,11 @@ set_unsolved_sudoku()									n^2
 			}
 			generate_filled_sudoku_more_efficiently(sudoku, 0, 0, placed_numbers, sorted_row_sudoku, sorted_col_sudoku,
 				sorted_sub_sudoku, 0);
-			alert(time);
+			// alert(time);
 			time = 0;
 			set_solved_sudoku(sudoku);
 			ask_user_for_sudoku_difficulty_level(sudoku, sorted_row_sudoku, sorted_col_sudoku, sorted_sub_sudoku);
-			alert("done");
+			// alert("done");
 			set_unsolved_sudoku(sudoku);
 			user_guess();
 
@@ -1490,8 +1490,9 @@ set_unsolved_sudoku()									n^2
 			do {
 				time++;
 				if (time % 5000000 == 0) {
-					alert("Program is still working, " + time + " iterations have been executed\n\ncurrently looking at s_" +
-						row + "_" + col);
+					console.log("Program is still working, " + time + " iterations have been executed\n\ncurrently looking at s_" + row + "_" + col);
+					// alert("Program is still working, " + time + " iterations have been executed\n\ncurrently looking at s_" +
+					// 	row + "_" + col);
 				}
 				sudoku[row][col] = 0;
 
@@ -1644,7 +1645,7 @@ set_unsolved_sudoku()									n^2
 				number_of_sudoku_boxes_checked++;
 
 				if (number_of_sudoku_boxes_checked % (100) == 0) {
-					alert(number_of_sudoku_boxes_checked + " have been checked");
+					// alert(number_of_sudoku_boxes_checked + " have been checked");
 				}
 
 				unfilled_boxes++;
@@ -1987,63 +1988,20 @@ set_unsolved_sudoku()									n^2
 <body style="margin:0px; padding:0px; clear:left; background-color:#B8B8B8;"
 	onkeydown="move_to_arrowed_box(window.event)">
 	<div id="outer_wrapper">
-		<div id="inner_div">
-			<div id="photo_section">
-				<a href="http://all-that-you-can-s333.tumblr.com/"><img
-						src="http://25.media.tumblr.com/1d1775c2ba94f767f732178f50811d94/tumblr_mzvjmonlZH1rr18yxo1_1280.gif"></a>
-			</div>
-			<div id="nav">
-				<ul>
-					<li><a href="http://all-that-you-can-s333.tumblr.com/">Home</a></li>
-					<li id="subclass">Information
-						<ul>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/information/interests">Interests</a>
-							</li>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/information/experience">Experience</a>
-							</li>
-						</ul>
-					</li>
-					<li id="subclass2">Projects
-						<ul>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/projects/coding">Coding</a></li>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/projects/photoshop">Photoshop</a></li>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/projects/flash">Flash</a></li>
-							<li><a href="http://all-that-you-can-s333.tumblr.com/projects/html">HTML</a></li>
-						</ul>
-					</li>
-					<li>Contact</li>
-				</ul>
-
-			</div>
-			<div id="experience_nav">
-				<a href="#sudoku">Sudoku Program</a><br>
-			</div>
-
-
-
-		</div>
 		<div id="time_board">
 		</div>
 		<div id="whats_going_on">
 		</div>
 		<div id="information_section_1">
-
 			<H1 style="text-align: center;" id="sudoku">~~~~~~~~Large Sudoku Program~~~~~~~~~</H1>
 
 			Enter the amount of sub boxes for the sudoku. A normal sudoku will be 3. The smallest number allowed to be
 			entered is 2:<input type="number" name="board_sub_box_amount" min="2"><br>
 			<input type="submit" value="Submit" onclick="create_board()">
-
-
 		</div>
-
 		<br>
 	</div>
-
 	</div>
-
-
-
 </body>
 
 </html>
